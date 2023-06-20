@@ -3,10 +3,10 @@
 These are all indicators coded in Pine Script. 
 In order for these scripts to run, they must be copied and pasted into TradingView.com's native IDE, Pine Editor.
 
-# Money Flow
+### Money Flow
 This indicator tracks money flowing in and out of a security. Best used wtih Tick Data.
 
-# Money Flow MTF 20 Min
+### Money Flow MTF 20 Min
 This indicator attempts to "slightly" fix the problem of using Money Flow with traditional time-series data. It takes a time series
 (in this stock data that is in increments of 20 mins) and slices the data up into an average of the sum of it's parts. This gives a more 
 accurate representation of the money flow in real-time during that 20 minute time period.
@@ -16,7 +16,7 @@ is marked as negative. But what if the stock had money flowing in for 19 minutes
 spoofing, or plain retail panic selling? The original Money Flow indicator does not take this into account. By slicing up the total 20 minutes
 into a sum of its parts, then we get a more accurate picture, albeit not a perfect one. For perfect accuracy, use tick data!
 
-# Integrated Fractal Statistic
+### Integrated Fractal Statistic
 
 This is a synthesis of my knowledge in the various domains of Data Science, Chaos Theory, Fractal Geometry, Statistics, and practical 
 trading experience. This indicator is an extension of statistical data analysis methods. However, standard statistical analysis methods 
