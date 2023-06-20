@@ -1,0 +1,10 @@
+// This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © iankobi95
+
+//@version=5
+indicator(title='Money Flow', shorttitle='MF', format=format.volume, precision=0, timeframe='')
+
+src = input(close, title='Source')
+MF = ta.cum(src*(math.sign(ta.change(src))*volume))
+
+plot(MF, color=color.new(color.yellow, 0))

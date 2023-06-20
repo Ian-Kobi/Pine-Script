@@ -1,0 +1,144 @@
+//@version=5
+//@author iankobi95
+
+indicator('MF MTF 20min', format = format.volume)
+
+
+TF1 = input.timeframe('1')
+TF2 = input.timeframe('2')
+TF3 = input.timeframe('3')
+TF4 = input.timeframe('4')
+TF5 = input.timeframe('5')
+TF6 = input.timeframe('6')
+TF7 = input.timeframe('7')
+TF8 = input.timeframe('8')
+TF9 = input.timeframe('9')
+TF10 = input.timeframe('10')
+TF11 = input.timeframe('11')
+TF12 = input.timeframe('12')
+TF13 = input.timeframe('13')
+TF14 = input.timeframe('14')
+TF15 = input.timeframe('15')
+TF16 = input.timeframe('16')
+TF17 = input.timeframe('17')
+TF18 = input.timeframe('18')
+TF19 = input.timeframe('19')
+TF20 = input.timeframe('20')
+// TF21 = input.timeframe('21H')
+// TF22 = input.timeframe('22H')
+// TF23 = input.timeframe('23H')
+// TF24 = input.timeframe('24H')
+
+
+is_newbar(res) =>
+    t = time(res)
+    ta.change(t) != 0 ? 1 : 0
+
+src1 = request.security(syminfo.tickerid, TF1, close)
+src1v = request.security(syminfo.tickerid, TF1, volume)
+MFF1 = src1 * math.sign(ta.change(src1)) * src1v
+
+src2 = request.security(syminfo.tickerid, TF2, close)
+src2v = request.security(syminfo.tickerid, TF2, volume)
+MFF2 = src2 * math.sign(ta.change(src2)) * src2v
+
+src3 = request.security(syminfo.tickerid, TF3, close)
+src3v = request.security(syminfo.tickerid, TF3, volume)
+MFF3 = src3 * math.sign(ta.change(src3)) * src3v
+
+src4 = request.security(syminfo.tickerid, TF4, close)
+src4v = request.security(syminfo.tickerid, TF4, volume)
+MFF4 = src4 * math.sign(ta.change(src4)) * src4v
+
+src5 = request.security(syminfo.tickerid, TF5, close)
+src5v = request.security(syminfo.tickerid, TF5, volume)
+MFF5 = src5 * math.sign(ta.change(src5)) * src5v
+
+src6 = request.security(syminfo.tickerid, TF6, close)
+src6v = request.security(syminfo.tickerid, TF6, volume)
+MFF6 = src6 * math.sign(ta.change(src6)) * src6v
+
+src7 = request.security(syminfo.tickerid, TF7, close)
+src7v = request.security(syminfo.tickerid, TF7, volume)
+MFF7 = src7 * math.sign(ta.change(src7)) * src7v
+
+src8 = request.security(syminfo.tickerid, TF8, close)
+src8v = request.security(syminfo.tickerid, TF8, volume)
+MFF8 = src8 * math.sign(ta.change(src8)) * src8v
+
+src9 = request.security(syminfo.tickerid, TF9, close)
+src9v = request.security(syminfo.tickerid, TF9, volume)
+MFF9 = src9 * math.sign(ta.change(src9)) * src9v
+
+src10 = request.security(syminfo.tickerid, TF10, close)
+src10v = request.security(syminfo.tickerid, TF10, volume)
+MFF10 = src10 * math.sign(ta.change(src10)) * src10v
+
+src11 = request.security(syminfo.tickerid, TF11, close)
+src11v = request.security(syminfo.tickerid, TF11, volume)
+MFF11 = src11 * math.sign(ta.change(src11)) * src11v
+
+src12 = request.security(syminfo.tickerid, TF12, close)
+src12v = request.security(syminfo.tickerid, TF12, volume)
+MFF12 = src12 * math.sign(ta.change(src12)) * src12v
+
+src13 = request.security(syminfo.tickerid, TF13, close)
+src13v = request.security(syminfo.tickerid, TF13, volume)
+MFF13 = src13 * math.sign(ta.change(src13)) * src13v
+
+src14 = request.security(syminfo.tickerid, TF14, close)
+src14v = request.security(syminfo.tickerid, TF14, volume)
+MFF14 = src14 * math.sign(ta.change(src14)) * src14v
+
+src15 = request.security(syminfo.tickerid, TF15, close)
+src15v = request.security(syminfo.tickerid, TF15, volume)
+MFF15 = src15 * math.sign(ta.change(src15)) * src15v
+
+src16 = request.security(syminfo.tickerid, TF16, close)
+src16v = request.security(syminfo.tickerid, TF16, volume)
+MFF16 = src16 * math.sign(ta.change(src16)) * src16v
+
+src17 = request.security(syminfo.tickerid, TF17, close)
+src17v = request.security(syminfo.tickerid, TF17, volume)
+MFF17 = src17 * math.sign(ta.change(src17)) * src17v
+
+src18 = request.security(syminfo.tickerid, TF18, close)
+src18v = request.security(syminfo.tickerid, TF18, volume)
+MFF18 = src18 * math.sign(ta.change(src18)) * src18v
+
+src19 = request.security(syminfo.tickerid, TF19, close)
+src19v = request.security(syminfo.tickerid, TF19, volume)
+MFF19 = src19 * math.sign(ta.change(src19)) * src19v
+
+src20 = request.security(syminfo.tickerid, TF20, close)
+src20v = request.security(syminfo.tickerid, TF20, volume)
+MFF20 = src20 * math.sign(ta.change(src20)) * src20v
+
+// src21 = request.security(syminfo.tickerid, TF21, close)
+// src21v = request.security(syminfo.tickerid, TF21, volume)
+// MFF21 = src21 * math.sign(ta.change(src21))*src21v
+
+// src22 = request.security(syminfo.tickerid, TF22, close)
+// src22v = request.security(syminfo.tickerid, TF22, volume)
+// MFF22 = src22 * math.sign(ta.change(src22)) * src22v
+
+// src23 = request.security(syminfo.tickerid, TF23, close)
+// src23v = request.security(syminfo.tickerid, TF23, volume)
+// MFF23 = src23 * math.sign(ta.change(src23)) * src23v
+
+// src24 = request.security(syminfo.tickerid, TF24, close)
+// src24v = request.security(syminfo.tickerid, TF24, volume)
+// MFF24 = src24 * math.sign(ta.change(src24))*src24v
+
+MF = ta.cum((MFF1+MFF2+MFF3+MFF4+MFF5+MFF6+MFF7+MFF8+MFF9+MFF10+MFF11+MFF12+MFF13+MFF14+MFF15+MFF16+MFF17+MFF18+MFF19+MFF20) / 20)
+
+plot(MF, color=color.new(color.yellow, 0))
+
+
+// src = close, len = 9
+// out = sma(src, len)
+// out1 = security(syminfo.tickerid, 'D', out)
+// plot(out1)
+
+
+
