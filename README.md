@@ -7,9 +7,9 @@ In order for these scripts to run, they must be copied and pasted into TradingVi
 This indicator tracks money flowing in and out of a security. Best used wtih Tick Data.
 
 ### Money Flow MTF 20 Min
-This indicator attempts to "slightly" fix the problem of using Money Flow with traditional time-series data. It takes a time series
-(in this stock data that is in increments of 20 mins) and slices the data up into an average of the sum of it's parts. This gives a more 
-accurate representation of the money flow in real-time during that 20 minute time period.
+This indicator attempts to "fix" the problem of using Money Flow with traditional time-series data. It takes a time series
+(in this stock data that is in increments of 20 mins) and slices the data up into an average of the sum of it's parts. It's a multi-time frame indicator.
+This gives a more accurate representation of the money flow in real-time during that 20 minute time period.
 
 To specifically describe the problem (and thus the solution here), if a stock closes lower in the span of 20 minutes then all of the money flow 
 is marked as negative. But what if the stock had money flowing in for 19 minutes straight before it was hit with a ladder attack, other
