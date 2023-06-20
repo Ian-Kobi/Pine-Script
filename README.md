@@ -26,6 +26,5 @@ randomness of the current data can be gauged. By monitoring the state of randomn
 of our statistical indicators. 
 
 This indicator plots an exponential linear regression using the R-squared method for fitted linear regression. Then to check the accuracy of our
-regression, uses fractal geometry to calculate the fractal dimension of the time-series. It also uses Detrended Fluctuation Analysis to measure
-the current state of randomness for our time-series. These can both then be used to determine the level of confidence we can have when deciding 
-whether to follow our statistical forecasting.
+regression, it uses fractal geometry to calculate the fractal dimension of the time-series. It also uses Detrended Fluctuation Analysis to measure
+the current state of randomness for our time-series. Together these can both then be used to heuristically determine the level of confidence we can have when deciding in real-time whether to follow our statistical forecasting or not.
