@@ -2,6 +2,7 @@
 
 These are all indicators coded in Pine Script. 
 In order for these scripts to run, they must be copied and pasted into TradingView.com's native IDE, Pine Editor.
+I've included a picture for data visualization purposes.
 
 ### Money Flow
 This indicator tracks money flowing in and out of a security. Best used wtih Tick Data.
